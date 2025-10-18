@@ -1,3 +1,4 @@
+#pragma once
 enum {
 	BUTTON_A,
 	BUTTON_B,
