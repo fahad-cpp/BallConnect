@@ -14,6 +14,9 @@ public:
 		window.create(sf::VideoMode(width, height), name);
 		event = {};
 	}
+	~Window() {
+		window.close();
+	}
 
 	void handleEvents();
 	void display();

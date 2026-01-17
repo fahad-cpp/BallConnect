@@ -5,6 +5,9 @@ void Window:: handleEvents() {
 		if (event.type == sf::Event::Closed) {
 			window.close();
 		}
+		else if (event.type == sf::Event::Resized) {
+			
+		}
 	}
 }
 
