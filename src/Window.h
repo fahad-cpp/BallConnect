@@ -4,11 +4,11 @@
 #include <string>
 class Window
 {
-	unsigned int width, height;
 	const std::string name;
 	sf::RenderWindow window;
 	sf::Event event;
 public:
+	unsigned int width, height;
 	Window(unsigned int width=720,unsigned int height=720,const std::string& name="") {
 		window.setFramerateLimit(60);
 		window.create(sf::VideoMode(width, height), name);
@@ -20,6 +20,7 @@ public:
 
 	void handleEvents();
 	void display();
+	void draw(const sf::Drawable& drawable);
 	void clear(sf::Color color = sf::Color(0,0,0));
 	bool isOpen();
 };

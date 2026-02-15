@@ -1,20 +1,13 @@
 #pragma once
 #include "Window.h"
+typedef unsigned int u32;
 class Game
 {
 	Window* window=nullptr;
 public:
-	Game() {
-	}
-	~Game() {
-	}
-	void run() {
-		window = new Window(720, 720, "Ball Connect!");
-		while (window->isOpen()) {
-			window->handleEvents();
-			window->clear(sf::Color(255,255,255));
-			window->display();
-		}
-		delete window;
-	}
+	Game();
+	~Game();
+	void drawGrid(u32 x, u32 y,u32 width,u32 height);
+	void update();
+	void run();
 };
